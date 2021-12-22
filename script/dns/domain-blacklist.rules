@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"CUSTOM: domain blacklist detected"; classtype:domainblacklist;lua:domain-blacklist.lua; sid:100000000;rev:1;)
