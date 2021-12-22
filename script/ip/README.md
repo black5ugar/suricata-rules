@@ -11,7 +11,7 @@ suricata的lua脚本有两种形式
 
 格式为：
 ```
-<domain>;<reference>
+<ip>;<reference>
 ```
 每条记录占一行  
 
