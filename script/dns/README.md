@@ -6,7 +6,7 @@ suricata的lua脚本有两种形式
 - 基于检测
 - 基于写日志的  
 **该脚本是基于检测的**，会生成alert输出在fast.json和eve.json里，而不是产生额外的输出
----
+
 ## 使用方法
 - 首先新建一个domain-blacklist.lst黑名单文件
 
