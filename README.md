@@ -7,3 +7,4 @@
 
 - rules  
   suricata 规则
+  - exploit_kit 一些渗透和扫描工具的检测规则
