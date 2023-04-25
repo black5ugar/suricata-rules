@@ -1,0 +1,6 @@
+# frp 检测规则
+# frp 出网流量
+alert tcp $HOME_NET any -> $EXTERNAL_NET  any (msg:"CUSTOM: possibly frp outbonud traffic detected";flow:to_server,established;content:"|7b 22|"; offset:9;content:"privilege_key|22 3a 22|"; fast_pattern; nocase; classtype: proxy; sid: 4110002;)
+
+# frp 入网流量
+alert tcp $EXTERNAL_NET any -> $HOME_NET  any (msg:"CUSTOM: possibly frp inbound traffic detected";flow:to_client,established;content:"|7b 22|"; offset:9; content:"run_id|22 3a 22|"; fast_pattern; nocase; classtype: proxy; sid: 4110003;)
